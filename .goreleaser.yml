@@ -88,7 +88,7 @@ brews:
 
     # Caveats for the user of your binary.
     # Default is empty.
-    caveats: "How to use this binary"
+    caveats: "Use kube-oidc-dj --getToken to generate token to authenticate to an kubernetes cluster"
 
     # Your app's homepage.
     # Default is empty.
@@ -127,7 +127,6 @@ brews:
     # Default is 'bin.install "program"'.
     install: |
       bin.install "kube-oidc-dj" => "kube-oidc-dj"
-      ...
 
     # Custom post_install script for brew.
     # Could be used to do any additional work after the "install" script
