@@ -123,27 +123,10 @@ brews:
       - name: zsh
         type: optional
 
-    # Packages that conflict with your package.
-    conflicts:
-      - svn
-      - bash
-
-    # Specify for packages that run as a service.
-    # Default is empty.
-    plist: |
-      <?xml version="1.0" encoding="UTF-8"?>
-      ...
-
-    # So you can `brew test` your formula.
-    # Default is empty.
-    test: |
-      system "#{bin}/program --version"
-      ...
-
     # Custom install script for brew.
     # Default is 'bin.install "program"'.
     install: |
-      bin.install "program"
+      bin.install "kube-oidc-dj" => "kube-oidc-dj"
       ...
 
     # Custom post_install script for brew.
