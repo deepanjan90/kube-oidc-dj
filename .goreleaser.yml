@@ -22,8 +22,6 @@ archives:
       amd64: x86_64
 checksum:
   name_template: 'checksums.txt'
-snapshot:
-  name_template: "{{ incpatch .Version }}-next"
 changelog:
   sort: asc
   filters:
@@ -35,7 +33,7 @@ brews:
   -
     # Name template of the recipe
     # Default to project name
-    name: myproject
+    name: gyrokubeoidcfdj
 
     # IDs of the archives to use.
     # Defaults to all.
@@ -63,7 +61,7 @@ brews:
     # Default for github is "https://github.com/<repo_owner>/<repo_name>/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
     # Default for gitlab is "https://gitlab.com/<repo_owner>/<repo_name>/-/releases/{{ .Tag }}/downloads/{{ .ArtifactName }}"
     # Default for gitea is "https://gitea.com/<repo_owner>/<repo_name>/releases/download/{{ .Tag }}/{{ .ArtifactName }}"
-    url_template: "http://github.mycompany.com/foo/bar/releases/{{ .Tag }}/{{ .ArtifactName }}"
+    #url_template: "http://github.mycompany.com/foo/bar/releases/{{ .Tag }}/{{ .ArtifactName }}"
 
     # Allows you to set a custom download strategy. Note that you'll need
     # to implement the strategy and add it to your tap repository.
@@ -110,14 +108,14 @@ brews:
     # If set to auto, the release will not be uploaded to the homebrew tap
     # in case there is an indicator for prerelease in the tag e.g. v1.0.0-rc1
     # Default is false.
-    skip_upload: true
+    skip_upload: false
 
     # Custom block for brew.
     # Can be used to specify alternate downloads for devel or head releases.
     # Default is empty.
-    custom_block: |
-      head "https://github.com/some/package.git"
-      ...
+    #custom_block: |
+      #head "https://github.com/some/package.git"
+      #...
 
     # Packages your package depends on.
     dependencies:
@@ -151,6 +149,6 @@ brews:
     # Custom post_install script for brew.
     # Could be used to do any additional work after the "install" script
     # Default is empty.
-    post_install: |
+    #post_install: |
         #etc.install "app-config.conf"
         #...
