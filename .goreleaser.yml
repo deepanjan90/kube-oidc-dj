@@ -88,7 +88,7 @@ brews:
 
     # Caveats for the user of your binary.
     # Default is empty.
-    caveats: "Use kube-oidc-dj --getToken to generate token to authenticate to an kubernetes cluster"
+    caveats: "Use kube-oidc-dj getToken to generate token to authenticate to an kubernetes cluster"
 
     # Your app's homepage.
     # Default is empty.
@@ -119,6 +119,22 @@ brews:
 
     # Packages your package depends on.
     dependencies:
+      - name: argoproj/tap/kubectl-argo-rollouts
+      - name: awscli
+      - name: kubectl
+      - name: kubectx
+      - name: aws-iam-authenticator
+      - name: helm
+      - name: helmfile
+      - name: linkerd
+      - name: gettext
+      - name: jq
+      - name: python-yq
+      - name: sops
+      - name: direnv
+      - name: kube-ps1
+      - name: calicoctl
+      - name: int128/kubelogin/kubelogin
       - name: git
       - name: zsh
         type: optional
